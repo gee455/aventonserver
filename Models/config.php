@@ -6,8 +6,8 @@
 define("APP_NAME", "Roadyo"); // Will be used for all push notifications, mails, invoices and any other places where app name is needed to display
 define("APP_DISTANCE_METERS", "1609.34"); // miles, for KM, 1000
 define("APP_DISTANCE_METRIC", "Miles"); // String, Miles / KM
-define("APP_SERVER_HOST", "http://dir/");
-define("APP_PIC_HOST", "http://dir/pics/");
+define("APP_SERVER_HOST", "http://aventonserver.herokuapp.com/");
+define("APP_PIC_HOST", "http://aventonserver.herokuapp.com/pics/");
 define("APP_PUBNUB_CHANNEL", "channelName");
 define("APP_DRIVER_INACTIVATE_TIME", 300); // seconds for the driver to get inactivated, when there is no update of location from driver application
 define("CURRENCY_SYMBOLE", "DA"); // seconds for the driver to get inactivated, when there is no update of location from driver application
