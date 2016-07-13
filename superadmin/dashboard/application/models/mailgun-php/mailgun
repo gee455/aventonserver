@@ -1,0 +1,29 @@
+$data = array('first_name'=>$_POST['first_name'],
+               'last_name'=>$_POST['last_name'],
+               'user_email'=>$_POST['user_email'],
+               'phone'=>$_POST['phone'],
+               'COUNTRY'=>$_POST['COUNTRY'],
+               'CITY'=>$_POST['CITY'],
+               'user_pass'=>$_POST['user_pass'],
+               'user_pass_retype'=>$_POST['user_pass_retype'],
+                   
+              );
+
+
+
+# Include the Autoloader (see "Libraries" for install instructions)
+require 'mailgun-php/vendor/autoload.php';
+use Mailgun\Mailgun;
+
+# Instantiate the client.
+$mgClient = new Mailgun('key-001c9d51220813f07cbe08c9ddeae8e6');
+$domain = "sandbox87e182e0d2be444ead3d6c6b3a71bb9c.mailgun.org";
+
+# Make the call to the client.
+$result = $mgClient->sendMessage("$domain",
+                  array('from'    => 'Mailgun Sandbox <postmaster@sandbox87e182e0d2be444ead3d6c6b3a71bb9c.mailgun.org>',
+                        'to'      => 'neha <info@deliveryplus.US>',
+                        'subject' => 'delivery plus',
+                        'text'    => $data
+                      ));
+ 
